@@ -1,5 +1,7 @@
 # Telefier - Telegram notifier utility
 
+[![Deploy to PyPI](https://github.com/ablil/telefier/actions/workflows/deploy.yml/badge.svg)](https://github.com/ablil/telefier/actions/workflows/deploy.yml)
+
 Simple Telegram notification utility to inject on your python app or script.
 
 ## Get started

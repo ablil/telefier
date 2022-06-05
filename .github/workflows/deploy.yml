@@ -1,0 +1,25 @@
+name: 'Deploy to PyPI'
+on:
+  release:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 'install dependencies'
+        run: |
+          python3 -m pip install --upgrade build
+          python3 -m pip install --upgrade twine
+
+      - name: 'build'
+        run: python3 -m build
+
+      - name: 'publish'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          skip_existing: true
+
