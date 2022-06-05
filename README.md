@@ -16,6 +16,8 @@ You have to setup a Telegram bot (more info here):
 
 ### Usage
 
+First install the package through pip: `pip3 install telefier`
+
 ```py
 #!/usr/bin/env python3
 
