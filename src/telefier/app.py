@@ -5,7 +5,7 @@ from telethon.sync import TelegramClient
 
 
 class Telefier:
-    def __init__(self, api_id: str, api_hash: str, token: str, username: str):
+    def __init__(self, api_id: str, api_hash: str, token: str):
         self.username = username
         self.api_id = api_id
         self.api_hash = api_hash
@@ -16,5 +16,5 @@ class Telefier:
         self.client.start(bot_token=self.token)
         self.client.connect()
 
-    def notify(self, message):
-        self.client.send_message(self.username, message)
+    def notify(self, username, message):
+        self.client.send_message(username, message)
