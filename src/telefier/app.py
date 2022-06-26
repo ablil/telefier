@@ -6,7 +6,6 @@ from telethon.sync import TelegramClient
 
 class Telefier:
     def __init__(self, api_id: str, api_hash: str, token: str):
-        self.username = username
         self.api_id = api_id
         self.api_hash = api_hash
         self.token = token
